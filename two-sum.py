@@ -3,6 +3,7 @@
     Output: [0,1]
     Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
     https://leetcode.com/problems/two-sum/description/?envType=problem-list-v2&envId=oizxjoit
+    https://www.youtube.com/watch?v=KLlXCFG5TnA&list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf
 '''
 from typing import List
 
