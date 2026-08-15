@@ -19,38 +19,26 @@ from typing import List
 
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        prefix_ar = [1] * (len(nums))
         postfix_ar = [1] * (len(nums))
         res = [1] * (len(nums))
         prefix = 1
         postfix = 1
-        print("input: ", nums)
+        # print("input: ", nums)
+        j = len(nums)-1
         for i in range(len(nums)):
-            prefix_ar[i] = prefix
+            res[i] = prefix
             prefix *= nums[i]
-        print("prefix: ", prefix_ar)
-        for i in range(len(nums)-1, -1, -1):
-            postfix_ar[i]=postfix * nums[i]
-            postfix = postfix_ar[i]
-        print("postfix: ", postfix_ar)
-        # calculate result 
-        for i in range(len(nums)):
-            if i == 0:
-                prefix = 1
-                postfix = postfix_ar[1]
-            elif i == len(nums)-1:
-                prefix = prefix_ar[i]
-                postfix = 1
-            else:
-                prefix = prefix_ar[i]
-                postfix = postfix_ar[i+1]
-            print(f"i: {i}, prefix: {prefix}, postfix: {postfix}")
-            res[i]= prefix * postfix
 
+        # print("prefix: ", res)
+        postfix= 1
+        # print("nums: ", nums) 
+        for i in range(len(nums)-1, -1, -1):
+            # print(f"i: {i}, postfix: {postfix}, resi: {res[i]}, numsi{nums[i]}")
+            res[i]=postfix * res[i]
+            postfix = postfix * nums[i]
         # print("result: ", res)
         return res
         
 s = Solution()
-# print(s.productExceptSelf([1,  2,  3,  4]))
-# print(s.productExceptSelf([-1,1,0,-3,3]))
-print(s.productExceptSelf([4,3,2,1,2]))
+assert s.productExceptSelf([1, 2, 3, 4]) == [24, 12, 8, 6]
+assert s.productExceptSelf([-1,1,0,-3,3]) == [0,0,9,0,0]
