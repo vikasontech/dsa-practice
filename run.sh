@@ -1,3 +1,2 @@
 #!/bin/sh
-
-python3 product-of-array-except-self.py
+python3 container-with-most-water.py
