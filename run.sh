@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 maximum-subarray.py
+python3 maximum-product-subarray.py
