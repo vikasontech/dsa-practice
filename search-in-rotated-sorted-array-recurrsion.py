@@ -28,31 +28,10 @@ from typing import List
 
 class Solution:
     def process(self, nums: List[int], target: int) -> int:
-        l, r = 0, len(nums)-1
-        ar = nums
-        while l <= r:
-            mid = (l + r) // 2
-            if ar[mid] == target:
-                return mid
-            #left portion
-            if ar[l] <= ar[mid]:
-                if target < ar[l]:
-                    l = mid + 1
-                elif target > ar[mid]:
-                    l = mid + 1
-                else:
-                    r =  mid - 1
-            # right portion
-            else:
-                if target < ar[mid]:
-                    r = mid -1
-                elif target > ar[r]:
-                    r = mid -1
-                else:
-                    l = mid + 1
-        return -1
+        print("todo")
 s = Solution()
-assert s.process([3,1], 1) == 1
+
+# assert s.process([3,1], 1) == 1
 # assert s.process([3,4,5,6,1,2], 2) == 5
 # assert s.process([6,1,2], 2) == 2
 # assert s.process([4,5,6,7,0,1,2], 3) == -1
