@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 container-with-most-water.py
+python3 search-in-rotated-sorted-array.py
