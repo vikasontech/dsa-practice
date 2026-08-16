@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 search-in-rotated-sorted-array.py
+python3 maximum-subarray.py
