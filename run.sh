@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 maximum-product-subarray.py
+python3 merge-two-sorted-lists.py
