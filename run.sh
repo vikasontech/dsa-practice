@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 merge-two-sorted-lists.py
+python3 remove-nth-node-from-end-of-list.py
