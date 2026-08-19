@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 remove-nth-node-from-end-of-list.py
+python3 reorder-list.py

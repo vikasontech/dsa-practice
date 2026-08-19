@@ -22,20 +22,30 @@ class Solution:
         while ll:
             print(ll.val)
             ll = ll.next
+
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         # print('radhe radhe')
         prev, current = None, head[0]
 
         while current:
-            nxt = current.next
+            temp = current.next
             current.next = prev
             prev = current
-            current = nxt
+            current = temp
         # self.printList(prev)
+        return prev
+
+    def reverseList2(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        prev, cur = None, head[0]
+        while cur:
+            temp = cur.next
+            cur.next = prev
+            prev = cur
+            cur= temp
         return prev
 
 s = Solution()
 l = ListNode(1,ListNode(2, ListNode(3, ListNode(4,None))))
 # l = ListNode(1,ListNode(2, None))
-print(s.printList(s.reverseList([l])))
+s.printList(s.reverseList2([l]))
 
