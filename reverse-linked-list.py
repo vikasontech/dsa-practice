@@ -36,14 +36,15 @@ class Solution:
         return prev
 
     def reverseList2(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        prev, cur = None, head[0]
-        while cur:
-            temp = cur.next
-            cur.next = prev
-            prev = cur
-            cur= temp
+        curr = head[0]
+        prev = None
+        while curr:
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
         return prev
-
+        
 s = Solution()
 l = ListNode(1,ListNode(2, ListNode(3, ListNode(4,None))))
 # l = ListNode(1,ListNode(2, None))

@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 reorder-list.py
+python3 median-of-two-sorted-arrays.py
