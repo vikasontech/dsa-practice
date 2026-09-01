@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 median-of-two-sorted-arrays.py
+python3 combination-sum.py
