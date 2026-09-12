@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 combination-sum.py
+python3 longest-repeating-character-replacement.py
