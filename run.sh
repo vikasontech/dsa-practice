@@ -1,2 +1,3 @@
 #!/bin/sh
-python3 longest-repeating-character-replacement.py
+clear
+python3 insert-interval.py
